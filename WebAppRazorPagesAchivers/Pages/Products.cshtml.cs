@@ -4,29 +4,26 @@ using WebAppRazorPagesAchivers.Models;
 
 namespace WebAppRazorPagesAchivers.Pages
 {
-    public class RegisterModel : PageModel
+    public class ProductsModel : PageModel
     {
-
         public AppDb _db;
-        public RegisterModel()
+        public ProductsModel()
         {
             _db = new AppDb();
-        }       
-
+        }   
         [BindProperty]
-        public Users _Users { get; set; }
+        public Products _products { get; set; }
         public void OnGet()
         {
         }
 
-        public IActionResult OnPost()
-        {
+        public IActionResult OnPost() {
 
-            _db.Users.Add(_Users);
+            // add
+
+            _db.Products.Add(_products);
             _db.SaveChanges();
-
-            // Insert Logic
-            return RedirectToPage("Login");
+            return RedirectToPage("getProducts");
         }
     }
 }
