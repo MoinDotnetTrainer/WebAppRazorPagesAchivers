@@ -26,6 +26,7 @@
                                 <th>Email</th>
                                 <th>Password</th>
                                 <th>Dob</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         @foreach (var item in Model._usersdata)
@@ -37,6 +38,10 @@
                                     <td>@item.Email</td>
                                     <td>@item.Password</td>
                                     <td>@item.Dob</td>
+                                    <td>
+                                        <a href="EditUsers?ID=@item.ID">Edit</a>|
+                                        <a href="DeleteUsers?ID=@item.ID">Delete</a>
+                                    </td>
                                     @* <td><span class="badge bg-success">Active</span></td> *@
                                 </tr>
                             </tbody>
