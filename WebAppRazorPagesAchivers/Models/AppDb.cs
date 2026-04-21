@@ -18,5 +18,6 @@ namespace WebAppRazorPagesAchivers.Models
         //Add to insert data in db
 
         public DbSet<Products> Products { get; set; }
+
     }
 }

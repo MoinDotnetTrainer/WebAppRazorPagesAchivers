@@ -21,7 +21,6 @@ namespace WebAppRazorPagesAchivers.Pages
 
         public IActionResult OnPost()
         {
-
             _db.Users.Add(_Users);
             _db.SaveChanges();
 
